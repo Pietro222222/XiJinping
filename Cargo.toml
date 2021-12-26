@@ -6,8 +6,9 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-serenity = "0.10.9"
+serenity = { version = "0.10.9",  default-features = false, features = ["client", "gateway", "rustls_backend", "model", "unstable_discord_api"] }
 lazy_static = "1.4.0"
+tokio = { version = "1", features = ["macros", "rt-multi-thread"]}
 toml = "0.5.8"
 serde_derive = "1.0.132"
 serde = { version = "1.0.132", features = ["derive"] }
